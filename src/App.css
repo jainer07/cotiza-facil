@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  background-color: var(--color-fondo-primario);
+  width: 100%;
+  height: 100vh;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-fondo-primario);
+}
+
+.btn-primary {
+  background-color: var(--color-boton-primario) !important;
+  border: 1px solid var(--color-boton-primario) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-boton-primario-hover) !important;
+  border: 1px solid var(--color-boton-primario-hover) !important;
+}
+
+.btn-secondary {
+  background-color: var(--color-boton-secundario) !important;
+  border: 1px solid var(--color-boton-secundario) !important;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-boton-secundario-hover) !important;
+  border: 1px solid var(--color-boton-secundario-hover) !important;
+}
+
+.cliente_seleccionado {
+  display: flex;
+  justify-content: center;
+}
+
+.cliente_seleccionado h5 {
+  color: var(--color-subtitulo);
+}
+
+.producto_botones {
+  display: flex;
+  row-gap: 10px;
+  flex-direction: column;
+}
+
+.tabla_productos {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-top: 5px;
+  margin-bottom: 5px !important;
+}
+
+.tabla_productos tbody {
+  display: block;
+  max-height: 300px; /* altura máxima ajustable */
+  overflow-y: auto;
+}
+
+.tabla_productos thead,
+.tabla_productos tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+@media (width <= 768px) {
+  .tabla_productos {
+    border: none;
+  }
+
+  .tabla_productos thead {
+    display: none;
+  }
+
+  .tabla_productos tbody {
+      max-height: 428px;
+  }
+
+  .tabla_productos tbody  tr {
+    display: block;
+    margin-bottom: .5rem;
+    border: 1px solid #ddd;
+    background: #fff;
+  }
+
+  .tabla_productos td {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 0.25rem 0;
+  }
+
+  .tabla_productos td::before {
+    content: attr(data-label);
+    flex: 0 0 40%;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .tabla_productos td:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (width >=768px) {
+  .wrapper {
+    width: 425px;
+    max-width: 425px;
+    border: 1px solid var(--color-fondo-secundario);
+  }
+}

@@ -1,0 +1,44 @@
+:root {
+  /* Color base */
+  --color-base: #e65d0b;
+
+  /* Botones principales y acentos */
+  --color-boton-primario: #10b981;
+  --color-boton-primario-hover: #047857;
+
+  /* Botones de éxito (para acciones de confirmación) */
+  --color-boton-secundario: #e65d0b; /* Verde esmeralda */
+  --color-boton-secundario-hover: #b84a09;
+
+  /* Botones de alerta (para acciones de peligro o advertencia) */
+  --color-boton-alerta: #ef4444; /* Rojo vibrante */
+  --color-boton-alerta-hover: #b91c1c;
+
+  /* Textos */
+  --color-titulo: #1f2937;
+  --color-subtitulo: #4b5563;
+  --color-texto: #6b7280;
+
+  /* Fondos */
+  --color-fondo-primario: #f8f9fa;
+  --color-fondo-secundario: #e9ecef;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo-primario);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  color: var(--color-titulo) !important;
+}
