@@ -1,8 +1,13 @@
-import { defineConfig } from 'vite'
+/* eslint-env node */
+import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  base: '/cotiza-facil/',
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '')
+
+  return {
+    plugins: [react()],
+    base: env.VITE_BASE_PATH || '/',
+  }
 })

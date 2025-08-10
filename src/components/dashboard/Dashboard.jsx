@@ -13,20 +13,6 @@ export const Dashboard = () => {
         }
     }, [starting, navigate]);
 
-
-    // 	useEffect(() => {
-    // 		if (!clienteSeleccionado) return;
-
-    // 		const productosMensaje = productos.map(p => {
-    // 			const bonificacion = p.Bonificacion ? ` ${p.Bonificacion}` : '';
-    // 			return `${p.Nombre} ${p.Precio}${bonificacion}`;
-    // 		}).join('\n');
-
-    // 		const saludo = `Hola ${clienteSeleccionado.Nombre},\n\n`;
-    // 		setMensaje(saludo + productosMensaje);
-    // 	}, [clienteSeleccionado, productos]);
-
-
     return (
         <div className='wrapper px-1 py-1'>
 

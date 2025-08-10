@@ -1,4 +1,4 @@
-import { Button } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
 import CustomSelect from '../select/ReactSelect';
 import { useProducto } from './useProducto';
 import { TableProducto } from './TableProducto';
@@ -22,19 +22,22 @@ export const Producto = () => {
                 <h5>{cliente.Nombre} - {cliente.Whatsapp}</h5>
             </section>
             <section className='producto_seleccionado mb-2'>
-                <CustomSelect
-                    options={opcionesProductos}
-                    value={productosSeleccionados}
-                    onChange={handleProductoChange}
-                    placeholder="Busca y selecciona un producto..."
+                <Row>
+                    <Col md={{ span: 6 }} >
+                        <CustomSelect
+                            options={opcionesProductos}
+                            value={productosSeleccionados}
+                            onChange={handleProductoChange}
+                            placeholder="Busca y selecciona un producto..."
+                        />
+                    </Col>
+                </Row>
+
+                <TableProducto
+                    productosSeleccionados={productosSeleccionados}
+                    setProductosSeleccionados={setProductosSeleccionados}
+                    handleEliminarProducto={handleEliminarProducto}
                 />
-                {productosSeleccionados.length > 0 && (
-                    <TableProducto
-                        productosSeleccionados={productosSeleccionados}
-                        setProductosSeleccionados={setProductosSeleccionados}
-                        handleEliminarProducto={handleEliminarProducto}
-                    />
-                )}
             </section>
 
             <section className="producto_botones">
