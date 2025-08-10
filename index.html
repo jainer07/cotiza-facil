@@ -1,14 +1,26 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/cotiza-facil/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cotiza facil</title>
-    <script type="module" crossorigin src="/cotiza-facil/assets/index-Btj8e_Ur.js"></script>
-    <link rel="stylesheet" crossorigin href="/cotiza-facil/assets/index-DVoy5CVD.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/cotiza-facil/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="/cotiza-facil/manifest.json">
+  <meta name="theme-color" content="#e65d0b">
+  <title>Cotiza facil</title>
+  <script type="module" crossorigin src="/cotiza-facil/assets/index-HQRWCu-C.js"></script>
+  <link rel="stylesheet" crossorigin href="/cotiza-facil/assets/index-CHzeNra1.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(() => console.log("SW registrado"))
+      .catch(err => console.error("Error registrando SW", err));
+  }
+  </script>
+</body>
+
 </html>
